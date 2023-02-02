@@ -1,8 +1,6 @@
 package org.lessons.java.christmas;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Collections;
 
@@ -13,11 +11,11 @@ public class Main {
 		ArrayList<String> listaDesideri = new ArrayList<>();
 		boolean continua;
 		String desiderio;
-		System.out.print("Inserisci il tuo desiderio: ");
-		
+				
 		// Aperto inputContainer
 		Scanner inputContainer = new Scanner(System.in);
 		
+		System.out.print("Inserisci il tuo desiderio: ");
 		do {
 			desiderio = inputContainer.nextLine();
 			continua = !desiderio.equals("STOP");
@@ -30,6 +28,13 @@ public class Main {
 		
 		inputContainer.close();
 		// Chiuso inputContainer
+		
+		Collections.sort(listaDesideri);
+		
+		System.out.println(
+				"Riepilogo della tua lista dei desideri: " +
+				listaDesideri
+		);
 		
 		System.out.println("Programma terminato!");
 

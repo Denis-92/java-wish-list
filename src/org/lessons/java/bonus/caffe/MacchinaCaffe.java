@@ -34,6 +34,7 @@ public class MacchinaCaffe {
 		System.out.println("Bevanda: " + b + " erogata.");
 	}
 	
-	
-	
+	public Bevanda getPrezzo (int selezione) {
+		return elencoBevande.get(selezione);
+	}
 }
